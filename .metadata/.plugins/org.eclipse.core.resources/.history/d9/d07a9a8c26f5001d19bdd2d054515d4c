@@ -1,0 +1,10 @@
+package model;
+
+public abstract class Observador {
+
+	private String temperatura;
+
+	protected void update(String temperatura) {
+		this.temperatura = temperatura;
+	}
+}

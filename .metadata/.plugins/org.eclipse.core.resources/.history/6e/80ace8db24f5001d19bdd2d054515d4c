@@ -1,0 +1,26 @@
+package data;
+
+public class EnArchivo {
+	private String ruta;
+
+	public EnArchivo(String ruta) {
+		this.ruta = Objects.requireNonNull(ruta);
+	}
+	private void escribirEnDisco(String txt) throws IOException {
+
+		try {
+			File archivo = new File(ruta);
+			if (!archivo.exists())
+				archivo.createNewFile();
+
+			FileWriter escritor = new FileWriter(archivo, true);
+			escritor.write(txt);
+			escritor.write(System.lineSeparator());
+			escritor.close();
+
+		} catch (FileNotFoundException e) {
+			throw new ErrorException("Error al escribir en el archivo.");
+		}
+	}
+
+}

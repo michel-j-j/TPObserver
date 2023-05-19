@@ -1,0 +1,14 @@
+package main;
+
+import model.ClimaOnline;
+import model.Medidor;
+import model.WeatherChannelService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ClimaOnline gestorClima = new WeatherChannelService();
+		Medidor medidor = new Medidor(gestorClima);
+	}
+
+}

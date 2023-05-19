@@ -1,0 +1,16 @@
+package data;
+
+import portsout.Observador;
+
+public class EnConsola implements Observador {	
+	
+	private final String FRIO = "Hace frio, se encendera la caldera";
+	private final String CALOR = "Hace calor, se encenderá el aire acondicionado";
+	
+	
+	@Override
+	public void update(String temperatura) {
+		
+	}
+
+}

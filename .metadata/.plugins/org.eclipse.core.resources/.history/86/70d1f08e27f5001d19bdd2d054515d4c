@@ -1,0 +1,13 @@
+package data;
+
+import portsout.Observador;
+
+public class EnConsola implements Observador {
+
+	@Override
+	public void update(String temperatura) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

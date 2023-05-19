@@ -1,0 +1,10 @@
+package portsout;
+
+public abstract class Observador {
+
+	private String temperatura;
+
+	public void update(String temperatura) {
+		this.temperatura = temperatura;
+	}
+}

@@ -1,0 +1,25 @@
+package main;
+
+import data.EnArchivo;
+import data.EnConsola;
+import model.ClimaOnline;
+import model.Medidor;
+import model.WeatherChannelService;
+import portsout.Observador;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ClimaOnline gestorClima = new WeatherChannelService();
+		Medidor medidor = new Medidor(gestorClima);
+
+		Observador archivo = new EnArchivo("resources/txt/Clima.txt");
+		Observador consola = new EnConsola();
+
+		medidor.agregarObservador(archivo);
+		medidor.agregarObservador(consola);
+
+		medidor.leerTemperatura();
+	}
+
+}

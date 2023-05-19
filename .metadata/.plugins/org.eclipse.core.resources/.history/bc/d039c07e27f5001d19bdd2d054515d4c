@@ -1,0 +1,4 @@
+package portsout;
+
+public interface Almacenar extends Observador {
+}

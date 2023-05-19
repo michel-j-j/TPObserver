@@ -1,0 +1,6 @@
+package portsout;
+
+public interface class Observador {
+
+	public void update(String temperatura);
+}

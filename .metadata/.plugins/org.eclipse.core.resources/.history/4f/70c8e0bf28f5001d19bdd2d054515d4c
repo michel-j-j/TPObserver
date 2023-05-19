@@ -1,0 +1,12 @@
+package main;
+
+import model.Medidor;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ClimaOnline gestorClima = new WeatherChannelService();
+		Medidor medidor = new Medidor();
+	}
+
+}

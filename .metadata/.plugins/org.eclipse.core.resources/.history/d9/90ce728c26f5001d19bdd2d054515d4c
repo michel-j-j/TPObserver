@@ -1,0 +1,7 @@
+package portsout;
+
+import model.Observador;
+
+public abstract class Almacenar extends Observador {
+
+}

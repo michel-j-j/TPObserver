@@ -1,0 +1,5 @@
+package portsout;
+
+public abstract class Almacenar extends Observador {
+
+}

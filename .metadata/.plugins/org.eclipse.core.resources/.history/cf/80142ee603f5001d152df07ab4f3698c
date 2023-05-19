@@ -1,0 +1,5 @@
+
+public abstract class Observado {
+	List<Observadores> observadores;
+	
+}

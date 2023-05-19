@@ -1,0 +1,10 @@
+import java.time.LocalDate;
+
+public abstract class Observador {
+
+	protected void update(String temperatura) {
+
+	}
+
+	protected void update(String temperatura, LocalDate fecha);
+}

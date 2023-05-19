@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class Api {
+	  public static void main(String[] args) {
+	        String apiKey = "{82a97fdb00c530fbd0597003d3a65ddd}";
+	        String cityId = "524901";
+
+	        try {
+	            // Construir la URL de la solicitud
+	            String apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=" + apiKey;
+	            URL url = new URL(apiUrl);
+
+	            // Crear una conexión HTTP
+	            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	            connection.setRequestMethod("GET");
+
+	            // Leer la respuesta
+	            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	            StringBuilder response = new StringBuilder();
+	            String line;
+	            while ((line = reader.readLine()) != null) {
+	                response.append(line);
+	            }
+	            reader.close();
+
+	            // Procesar la respuesta
+	            System.out.println(response.toString());
+
+	            // Cerrar la conexión
+	            connection.disconnect();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+}

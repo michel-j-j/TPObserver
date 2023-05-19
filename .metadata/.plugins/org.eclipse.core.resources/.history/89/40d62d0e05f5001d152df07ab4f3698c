@@ -1,0 +1,14 @@
+import java.util.List;
+
+public abstract class Observado {
+
+	List<Observador> observadores;
+
+	protected void agregarObservador(Observador observador) {
+		observadores.add(observador);
+	}
+
+	protected void notificar(String temperatura) {
+
+	}
+}
