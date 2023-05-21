@@ -2,11 +2,13 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Punto4"/>
 			<item value="Punto1"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Punto4"/>
 			<item value="Punto1"/>
 		</list>
 		<list key="version">
